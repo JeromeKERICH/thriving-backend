@@ -27,7 +27,7 @@ const app = express();
 app.use(helmet());
 
 app.use(cors({
-    origin: "http://localhost:5173",  // not https
+    origin: "https://www.thrivingmomspace.com",  // not https
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
   }));
