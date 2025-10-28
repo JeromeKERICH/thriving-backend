@@ -23,15 +23,18 @@ const programRegistrationRoutes = require('./routes/programRegistrationRoutes');
 
 const app = express();
 
+
+
+app.use(cors({
+  origin: "https://www.thrivingmomspace.com",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 // Basic middleware
 app.use(helmet());
 
-app.use(cors({
-    origin: "https://www.thrivingmomspace.com",  // not https
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-  }));
-app.use(express.json());
+
 
 
 
